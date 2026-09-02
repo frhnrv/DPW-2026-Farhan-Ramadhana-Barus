@@ -122,12 +122,17 @@ td button {
     font-size: 0.85rem;
 }
 
-td button:first-of-type {
+td button.Edit {
     background-color: #f0ad4e;
     color: #fff;
 }
 
-td button:last-of-type {
+td button.Detail {
+    background-color: #1d5b8a;
+    color: #fff;
+}
+
+td button.Hapus {
     background-color: #d9534f;
     color: #fff;
 }
