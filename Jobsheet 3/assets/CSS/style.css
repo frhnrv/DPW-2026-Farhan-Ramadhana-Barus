@@ -185,7 +185,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/*Hamburger Menu (checlbox hack)*/
+/*Hamburger Menu (checkbox hack)*/
 .nav-toggle {
     display: none;
 }
@@ -196,3 +196,28 @@ footer {
     color: #fff;
     cursor: pointer;
 }
+
+header {
+    position: relative;
+}
+
+.nav-toggle-label {
+    display: block;
+}
+
+header nav {
+    display: none;
+    width: 100%;
+    order: 3;
+    margin-top: 1rem;
+}
+
+.nav-toggle:checked ~ nav {
+    display: block;
+}
+
+header nav ul {
+    flex-direction: column;
+}
+
+
