@@ -70,7 +70,7 @@ section h2 {
 /*Kartu Statistik*/
 main section:nth-of-type(2) {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
 
@@ -221,3 +221,7 @@ header nav ul {
 }
 
 
+/*Tabel Responsive*/
+.table-responsive {
+    overflow-x: auto;
+}
