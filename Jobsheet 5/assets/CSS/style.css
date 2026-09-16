@@ -195,14 +195,13 @@ footer {
 }
 
 /*Hamburger Menu (checkbox hack)*/
-.nav-toggle {
-    display: none;
-}
 
 .nav-toggle-label {
     display: none;
     font-size: 1.6rem;
     color: #fff;
+    background: none;
+    border: none;
     cursor: pointer;
 }  
 
@@ -260,7 +259,7 @@ header nav ul {
         margin-top: 1rem;
     }
 
-    .nav-toggle:checked ~ nav {
+    header nav.nav-open {
         display: block;
     }
 
@@ -277,4 +276,25 @@ header nav ul {
     form select {
         max-width: 100%;
     }
+}
+
+/*Pesan error validasi*/
+.error {
+    display: block;
+    color: #d9534f;
+    font-size: 0.85 rem;
+    margin-top: 0.25 rem;
+}
+
+/*Kolom Pencarian*/
+.search-box {
+    margin-bottom: 1 rem;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.5 rem 0.75 rem;
+    border: 1px solid #cdd4da;
+    border-radius: 4px;
 }
