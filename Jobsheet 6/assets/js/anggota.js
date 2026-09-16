@@ -1,5 +1,5 @@
 // Mengambil &  menampilkan daftar buku secara asinkron dari data/buku.json
-async function muatdaftarBuku() {
+async function muatdaftarAnggota() {
     const tbody = document.querySelector(".table-responsive table tbody");
     const loading = document.getElementById("loading-indicator");
     if(!tbody) return;
