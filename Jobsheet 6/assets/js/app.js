@@ -1,15 +1,15 @@
-// Hamburger Menu
+// Hamburger menu
 function initNavToggle() {
     const toggleBtn = document.getElementById("nav-toggle-btn");
     const nav = document.querySelector("header nav");
     if (!toggleBtn || !nav) return;
 
-    toggleBtn.addEventListener("click", function() {
+    toggleBtn.addEventListener("click", function () {
         nav.classList.toggle("nav-open");
     });
 }
 
-// Konfirmasi Hapus
+// Konfirmasi hapus
 function initHapusConfirm() {
     document.querySelectorAll(".btn-hapus").forEach(function (btn) {
         btn.addEventListener("click", function () {
@@ -23,23 +23,23 @@ function initHapusConfirm() {
     });
 }
 
-// filter/pencarian tabel real time
+// Filter/pencarian tabel real-time
 function initTableFilter() {
     const input = document.getElementById("search-input");
     const table = document.querySelector(".table-responsive table");
     if (!input || !table) return;
 
-    input.addEventListener("keyup", function(){
-        const keyword = input.ariaValueMax.toLowerCase();
+    input.addEventListener("keyup", function () {
+        const keyword = input.value.toLowerCase();
         const rows = table.querySelectorAll("tbody tr");
-        rows.forEach(function(row) {
-            const teks = row.textContent.toLocaleLowerCase();
-            row.computedStyleMap.display = teks.includes(keyword) ? "" : "none";
+        rows.forEach(function (row) {
+            const teks = row.textContent.toLowerCase();
+            row.style.display = teks.includes(keyword) ? "" : "none";
         });
     });
 }
 
-// Validasi form
+// Validasi form 
 function tampilkanError(input, pesan) {
     hapusError(input);
     const span = document.createElement("span");
@@ -55,23 +55,60 @@ function hapusError(input) {
     }
 }
 
-function initValidationForm() {
+function initValidasiForm() {
     const form = document.getElementById("form-tambah");
     if (!form) return;
 
-    form.addEventListener("submit", function(e) {
+    form.addEventListener("submit", function (e) {
         let valid = true;
 
-        const judul = form.querySelector("[name='judul'], [name='nama'");
-        if (judul && judul.ariaValueMax.trim()=== "") {
+        const judul = form.querySelector("[name='judul'], [name='nama']");
+        if (judul && judul.value.trim() === "") {
             tampilkanError(judul, "Field ini wajib diisi.");
             valid = false;
         } else if (judul) {
             hapusError(judul);
         }
 
-        if(!valid) {
+        const pengarang = form.querySelector("[name='pengarang']");
+        if (pengarang && pengarang.value.trim() === "") {
+            tampilkanError(pengarang, "Pengarang wajib diisi.");
+            valid = false;
+        } else if (pengarang) {
+            hapusError(pengarang);
+        }
+
+        const tahun = form.querySelector("[name='tahun']");
+        if (tahun) {
+            const nilai = parseInt(tahun.value, 10);
+            if (isNaN(nilai) || nilai < 1900 || nilai > 2026) {
+                tampilkanError(tahun, "Tahun harus di antara 1900-2026.");
+                valid = false;
+            } else {
+                hapusError(tahun);
+            }
+        }
+
+        const stok = form.querySelector("[name='stok']");
+        if (stok) {
+            const nilai = parseInt(stok.value, 10);
+            if (isNaN(nilai) || nilai < 0) {
+                tampilkanError(stok, "Stok tidak boleh negatif.");
+                valid = false;
+            } else {
+                hapusError(stok);
+            }
+        }
+
+        if (!valid) {
             e.preventDefault();
         }
     });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    initNavToggle();
+    initHapusConfirm();
+    initTableFilter();
+    initValidasiForm();
+});

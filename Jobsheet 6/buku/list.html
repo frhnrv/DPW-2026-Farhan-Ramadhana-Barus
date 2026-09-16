@@ -13,7 +13,7 @@
             <nav>
                 <ul>
                     <li><a href="../index.html">Beranda</a></li>
-                    <li><a href="list.html"></a>Daftar Buku</li>
+                    <li><a href="list.html">Daftar Buku</a></li>
                     <li><a href="tambah.html">Tambah Buku</a></li>
                     <li><a href="../anggota/list.html">Daftar Anggota</a></li>
                     <li><a href="tambah.html">Tambah Anggota</a></li>
@@ -29,19 +29,19 @@
             </div>
             <p id="loading-indicator" style="display: none;">Memuat data...</p>
             <div class="table-responsive">
-            <h2>Daftar Anggota</h2>
+            <h2>Daftar Buku</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>No. Anggota</th>
-                        <th>Nama</th>
-                        <th>Alamat</th>
-                        <th>No. HP</th>
-                        <th>Tanggal Bergabung</th>
+                        <th>Judul</th>
+                        <th>Pengarang</th>
+                        <th>Tahun</th>
+                        <th>Stok</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
-                <!-- Baris diisi dinamis oleh assets/js/buku.js via fetch('../data/buku.json')-->>
+                <tbody>
+                <!-- Baris diisi dinamis oleh assets/js/buku.js via fetch('../data/buku.json')-->
                 </tbody>
             </table>
             </div>

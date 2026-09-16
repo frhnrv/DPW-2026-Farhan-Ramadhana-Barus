@@ -1,5 +1,5 @@
 // Mengambil &  menampilkan daftar buku secara asinkron dari data/buku.json
-async function muatdaftarBuku() {
+async function muatDaftarBuku() {
     const tbody = document.querySelector(".table-responsive table tbody");
     const loading = document.getElementById("loading-indicator");
     if(!tbody) return;
@@ -16,7 +16,7 @@ async function muatdaftarBuku() {
         }
         const daftarBuku = await res.json();
 
-        daftarBuku.forEach(function(anggota){
+        daftarBuku.forEach(function(buku){
             const tr = document.createElement("tr");
             tr.innerHTML = 
             "<td>" + buku.judul + "</td>"+
@@ -24,11 +24,12 @@ async function muatdaftarBuku() {
             "<td>" + buku.tahun + "</td>"+
             "<td>" + buku.stok + "</td>"+
             "<td>" +
-            "<button type=\"button\">Edit</td> " +
+            "<button type=\"button\">Edit</button> " +
             "<button type=\"button\" class=\"btn-hapus\">Hapus</button>" + 
             "</td>";
             tbody.appendChild(tr);
         });
+        initHapusConfirm();
     } catch (err) {
         tbody.innerHTML = 
         "<tr><td colspan=\"5\">Gagal memuat data: " + err.message + "</td></tr>";
@@ -37,4 +38,4 @@ async function muatdaftarBuku() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", muatdaftarBuku);
+document.addEventListener("DOMContentLoaded", muatDaftarBuku);

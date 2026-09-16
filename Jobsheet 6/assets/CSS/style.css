@@ -220,14 +220,13 @@ header nav {
     margin-top: 1rem;
 }
 
-.nav-toggle:checked ~ nav {
+header nav.nav-open{
     display: block;
 }
 
 header nav ul {
     flex-direction: column;
 }
-
 
 /*Table Responsive*/
 .table-responsive {
