@@ -9,28 +9,24 @@
 
 ## Struktur
 ```
-├──Praktikum
-│    ├───jobsheet-1
-│    │   ├───anggota
-│    │   ├───buku
-│    │   └───Dokumentasi
-│    ├───jobsheet-2
-│    │   ├───anggota
-│    │   ├───asset
-│    │   │   └───css
-│    │   ├───buku
-│    │   └───dokumentasi
-│    ├───jobsheet-3
-│    │   ├───anggota
-│    │   ├───asset
-│    │   │   └───css
-│    │   ├───buku
-│    │   └───dokumentasi
-│    └───jobsheet-4
-│        ├───anggota
-│        ├───asset
-│        │   └───css
-│        ├───buku
-│        └───dokumentasi
+
+├── jobsheet-05/
+│   ├── anggota/
+│   │   ├── list.html
+│   │   └── tambah.html
+│   ├── assets/
+│   │   └── css/
+│   │   |    └── style.css
+|   |   └── js/
+│   │       └── app.js
+│   ├── buku/
+│   │   ├── list.html
+│   │   └── tambah.html
+│   ├── dokumentasi/
+│   │   ├── user-flow.md
+│   │   └── wireframe.md
+│   ├── index.html
+│   └── readme.html
+│
 └── README.md
 ```
