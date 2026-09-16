@@ -10,23 +10,22 @@
 ## Struktur
 ```
 
-├── jobsheet-05/
-│   ├── anggota/
-│   │   ├── list.html
-│   │   └── tambah.html
-│   ├── assets/
-│   │   └── css/
-│   │   |    └── style.css
-|   |   └── js/
-│   │       └── app.js
-│   ├── buku/
-│   │   ├── list.html
-│   │   └── tambah.html
-│   ├── dokumentasi/
-│   │   ├── user-flow.md
-│   │   └── wireframe.md
-│   ├── index.html
-│   └── readme.html
-│
-└── README.md
-```
+jobsheet-06/
+├── index.html
+├── assets/
+│   ├── css/style.css        
+│   └── js/
+│       ├── app.js            
+│       ├── buku.js          
+│       └── anggota.js        
+├── data/
+│   ├── buku.json             
+│   └── anggota.json           
+├── buku/
+│   ├── list.html               
+│   └── tambah.html
+├── anggota/
+│   ├── list.html
+│   └── tambah.html            
+├── Dokumentasi/  
+└── README.md               
