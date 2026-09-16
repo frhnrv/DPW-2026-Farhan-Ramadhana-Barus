@@ -22,3 +22,19 @@ function initHapusConfirm() {
         });
     });
 }
+
+// filter/pencarian tabel real time
+function initTableFilter() {
+    const input = document.getElementById("search-input");
+    const table = document.querySelector(".table-responsive table");
+    if (!input || !table) return;
+
+    input.addEventListener("keyup", function(){
+        const keyword = input.ariaValueMax.toLowerCase();
+        const rows = table.querySelectorAll("tbody tr");
+        rows.forEach(function(row) {
+            const teks = row.textContent.toLocaleLowerCase();
+            row.computedStyleMap.display = teks.includes(keyword) ? "" : "none";
+        });
+    });
+}
