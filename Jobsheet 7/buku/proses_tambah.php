@@ -1,17 +1,25 @@
 <?php
 session_start();
 
-$nama = trim($_POST['nama'] ?? '');
-$noAnggota = trim($_POST['no_anggota'] ?? '');
-$alamat = trim($_POST['alamat'] ?? '');
-$noHp = trim($_POST['no_hp'] ?? '');
+$judul = trim($_POST['judul'] ?? '');
+$pengarang = trim($_POST['pengarang'] ?? '');
+$tahun = $_POST['tahun'] ?? '';
+$isbn = trim($_POST['isbn'] ?? '');
+$stok = $_POST['stok'] ?? '';
+$kategori = trim($_POST['kategori'] ?? '');
 
 $errors = [];
-if ($nama === '') {
-    $errors[] = "Nama wajib diisi.";
+if ($judul === '') {
+    $errors[] = "Judul wajib diisi.";
 }
-if ($noAnggota === '') {
-    $errors[] = "No. Anggota wajib diisi.";
+if ($pengarang === '') {
+    $errors[] = "Pengarang wajib diisi.";
+}
+if (!is_numeric($tahun) || $tahun < 1900 || $tahun > 2026) {
+    $errors[] = "Tahun harus di antara 1900-2026.";
+}
+if (!is_numeric($stok) || $stok < 0) {
+    $errors[] = "Stok tidak boleh negatif.";
 }
 
 if (!empty($errors)) {
@@ -20,17 +28,19 @@ if (!empty($errors)) {
     exit;
 }
 
-if (!isset($_SESSION['anggota'])) {
-    $_SESSION['anggota'] = [];
+if (!isset($_SESSION['buku'])) {
+    $_SESSION['buku'] = [];
 }
 
-$_SESSION['anggota'][] = [
-    'nama' => $nama,
-    'no_anggota' => $noAnggota,
-    'alamat' => $alamat,
-    'no_hp' => $noHp,
+$_SESSION['buku'][] = [
+    'judul' => $judul,
+    'pengarang' => $pengarang,
+    'tahun' => (int) $tahun,
+    'isbn' => $isbn,
+    'stok' => (int) $stok,
+    'kategori' => $kategori,
 ];
 
-$_SESSION['flash'] = ['type' => 'success', 'pesan' => 'Anggota berhasil ditambahkan.'];
+$_SESSION['flash'] = ['type' => 'success', 'pesan' => 'Buku berhasil ditambahkan.'];
 header('Location: list.php');
 exit;
