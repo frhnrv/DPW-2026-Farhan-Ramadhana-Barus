@@ -22,7 +22,7 @@ async function muatDaftarPemain() {
             "<td>" + pemain.id_player + "</td>"+
             "<td>" + pemain.username + "</td>"+
             "<td>" + pemain.rank + "</td>"+
-            "<td>" + pemain.email + "</td>"+
+            "<td>" + pemain.game_favorit + "</td>"+
             "<td>" +
             "<button type=\"button\">Edit</button> " +
             "<button type=\"button\" class=\"btn-hapus\">Hapus</button>" + 
