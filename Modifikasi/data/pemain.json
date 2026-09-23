@@ -1,0 +1,6 @@
+[
+    { "id_player": "P001", "username": "ShadowKnight", "rank": "Grandmaster", "email": "shadow@gmail.com" },
+    { "id_player": "P002", "username": "PixelGamer", "rank": "Master", "email": "pixel@gmail.com" },
+    { "id_player": "P003", "username": "NovaQueen", "rank": "Epic", "email": "nova@gmail.com" },
+    { "id_player": "P004", "username": "VortexSniper", "rank": "Legend", "email": "vortex@gmail.com" }
+]

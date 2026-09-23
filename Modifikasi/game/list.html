@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <title>SIGAME | Daftar Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../assets/CSS/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>SIMGAME</h1>
+            <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="list.html">Daftar Game</a></li>
+                    <li><a href="tambah.html">Tambah Game</a></li>
+                    <li><a href="../pemain/list.html">Daftar Pemain</a></li>
+                    <li><a href="../pemain/tambah.html">Tambah Pemain</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+        <section>
+            <div class="search-box">
+                <label for="search-input">Cari Judul Game</label>
+                <input type="text" id="search-input" placeholder="Ketik judul game...">
+            </div>
+            <p id="loading-indicator" style="display: none;">Memuat data game...</p>
+            <div class="table-responsive">
+            <h2>Daftar Katalog Game</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Judul Game</th>
+                        <th>Developer</th>
+                        <th>Tahun Rilis</th>
+                        <th>Platform</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <!-- Baris diisi dinamis via JavaScript -->
+                </tbody>
+            </table>
+            </div>
+        </section>
+    </main>
+
+        <footer>
+            <p>&copy; 2026 SIGAME &mdash; Manajemen Game</p>
+        </footer>
+        <script src="../assets/js/app.js"></script>
+        <script src="../assets/js/game.js"></script>
+    </body>
+</html>

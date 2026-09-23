@@ -1,0 +1,12 @@
+[
+    { "judul": "Mobile Legends: Bang Bang", "developer": "Moonton", "tahun": 2016, "stok": 15 },
+    { "judul": "Genshin Impact", "developer": "HoYoverse", "tahun": 2020, "stok": 10 },
+    { "judul": "Valorant", "developer": "Riot Games", "tahun": 2020, "stok": 8 },
+    { "judul": "Minecraft", "developer": "Mojang Studios", "tahun": 2011, "stok": 20 },
+    { "judul": "Grand Theft Auto V", "developer": "Rockstar Games", "tahun": 2013, "stok": 5 },
+    { "judul": "Cyberpunk 2077", "developer": "CD Projekt Red", "tahun": 2020, "stok": 3 },
+    { "judul": "Elden Ring", "developer": "FromSoftware", "tahun": 2022, "stok": 6 },
+    { "judul": "Dota 2", "developer": "Valve", "tahun": 2013, "stok": 12 },
+    { "judul": "Counter-Strike 2", "developer": "Valve", "tahun": 2023, "stok": 9 },
+    { "judul": "The Witcher 3", "developer": "CD Projekt Red", "tahun": 2015, "stok": 7 }
+]
