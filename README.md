@@ -10,24 +10,21 @@
 ## Struktur
 ```
 
-jobsheet-07/
-├── index.php                   
-├── includes/
-│   ├── header.php               
-│   └── footer.php     
-├── sql/
-│   └── 01_buku_anggota.sql           
-├── assets/
-│   ├── css/style.css            
-│   └── js/app.js                 
+jobsheet-09/
+├── index.php
+├── includes/                       
 ├── buku/
-│   ├── list.php                  
-│   ├── tambah.php                
-│   └── proses_tambah.php        
-├── anggota/
-│   ├── list.php
-│   ├── tambah.php
-│   └── proses_tambah.php         
-├── docs/wireframe.md              
+│   ├── list.php                   
+│   ├── tambah.php, proses_tambah.php 
+│   ├── edit.php                     
+│   ├── proses_edit.php              
+│   └── hapus.php                    
+├── anggota/                        
+│   ├── list.php, tambah.php, proses_tambah.php
+│   ├── edit.php, proses_edit.php, hapus.php
+├── assets/
+│   ├── css/style.css                
+│   └── js/app.js                     
+├── docs/wireframe.md                  
 ├── README.md
-└── Dokumentasi/                  
+└── Dokumentasi/                    
