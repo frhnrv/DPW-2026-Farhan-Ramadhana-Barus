@@ -18,7 +18,7 @@ if ($keyword !== '') {
     $totalRows = $hitung->fetchColumn();
 
     $stmt = $pdo->prepare("SELECT * FROM buku WHERE judul ILIKE :kw ORDER BY id DESC LIMIT :limit OFFSET :offset");
-    $stmt->bindValue('kw', '%' . $keyword . '%')
+    $stmt->bindValue('kw', '%' . $keyword . '%');
 } else {
     $totalRows = $pdo->query("SELECT COUNT (*) FROM buku")->fetchColumn();
     $stmt = $pdo->prepare("SELECT * FROM buku ORDER BY id DESC LIMIT :limit OFFSET :offset");
@@ -28,8 +28,8 @@ $stmt->bindValue('limit', $perPage, PDO::PARAM_INT);
 $stmt->bindValue('offset', $offset, PDO::PARAM_INT);
 $stmt->execute();
 
-$daftarBuku = $stmt->fetchAll(PDO::FETCH_ASSOC;
-%totalPages = max(1, (int) ceil($totalRows / $perPage)));
+$daftarBuku = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$totalPages = max(1, (int) ceil($totalRows / $perPage));
 ?>
         <section>
             <h2>Daftar Buku</h2>
