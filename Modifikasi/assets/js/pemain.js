@@ -21,11 +21,11 @@ async function muatDaftarPemain() {
             tr.innerHTML = 
             "<td>" + pemain.id_player + "</td>"+
             "<td>" + pemain.username + "</td>"+
-            "<td>" + pemain.rank + "</td>"+
+            "<td>" + pemain.no_hp + "</td>"+
             "<td>" + pemain.game_favorit + "</td>"+
             "<td>" +
-            "<button type=\"button\">Edit</button> " +
-            "<button type=\"button\" class=\"btn-hapus\">Hapus</button>" + 
+            "<button type=\"button\" class=\"Edit\">Edit</button> " +
+            "<button type=\"button\" class=\"Hapus btn-hapus\">Hapus</button>" + 
             "</td>";
             tbody.appendChild(tr);
         });

@@ -24,8 +24,8 @@ async function muatDaftarGame() {
             "<td>" + game.tahun + "</td>"+
             "<td>" + game.stok + "</td>"+
             "<td>" +
-            "<button type=\"button\">Edit</button> " +
-            "<button type=\"button\" class=\"btn-hapus\">Hapus</button>" + 
+            "<button type=\"button\" class=\"Edit\">Edit</button> " +
+            "<button type=\"button\" class=\"Hapus btn-hapus\">Hapus</button>" + 
             "</td>";
             tbody.appendChild(tr);
         });
